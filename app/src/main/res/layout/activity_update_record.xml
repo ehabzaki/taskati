@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:isScrollContainer="true"
+            android:paddingBottom="@dimen/activity_vertical_margin" android:background="#ffcf40"
+            tools:context="com.bassambadr.phonebook.activities.accountDetail.AccountDetailActivity"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/postHeader"
+                android:paddingTop="10dp"
+                android:paddingBottom="@dimen/activity_vertical_margin" android:background="#ffcf40"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentRight="true"
+
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/taskImag"
+                    android:src="@drawable/task"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/tasktextupdate"
+                    android:hint="task"
+                    android:inputType="textMultiLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/taskImag"
+                    android:backgroundTint="#760268"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@+id/taskImag" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/clockIcon"
+                android:src="@drawable/clock"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/postHeader"
+                android:layout_alignLeft="@+id/calenderIcon"
+                android:layout_alignStart="@+id/calenderIcon" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/timeTextupdate"
+                android:hint="Time"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_alignTop="@+id/clockIcon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/clockIcon"
+                android:layout_toStartOf="@+id/clockIcon"
+
+                android:backgroundTint="#760268" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/calenderIcon"
+                android:src="@drawable/calendar"
+                android:layout_marginTop="38dp"
+                android:layout_below="@+id/clockIcon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/dateTextupdate"
+                android:hint="date"
+                android:editable="false"
+                android:backgroundTint="#760268"
+                android:layout_above="@+id/Alarmedit"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/calenderIcon"
+                android:layout_toStartOf="@+id/calenderIcon" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="edit"
+                android:id="@+id/Alarmedit"
+                android:onClick="editAlarm"
+                android:layout_below="@+id/calenderIcon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="138dp" />
+
+
+
+        </RelativeLayout>
+    </LinearLayout></ScrollView>
